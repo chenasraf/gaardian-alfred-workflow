@@ -8,7 +8,7 @@ const results = getMaps(process.argv[2])
 
 console.log(JSON.stringify({
   items: results.map((it) => ({
-    title: `Open Gaardian Map for ${it.name}`,
+    title: `Open Gaardian Map for "${it.name}"`,
     arg: it.href,
   }))
 }))
