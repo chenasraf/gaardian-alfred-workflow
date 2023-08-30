@@ -10,10 +10,12 @@ const items = results.map((it) => ({
   arg: it.href,
 }))
 
+const qs = new URLSearchParams({ q: `aardwolf ${process.argv[2]}` }).toString()
+
 // if (!items.length) {
 items.push({
-  title: `Search for "aardwolf ${process.argv[2]} map" on Google`,
-  arg: `https://www.google.com/search?q=aardwolf+${process.argv[2]}+map`,
+  title: `Search for "aardwolf ${process.argv[2]}" on Google`,
+  arg: `https://www.google.com/search?${qs}`
 })
 // }
 
